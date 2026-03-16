@@ -28,6 +28,8 @@ The system follows a layered data platform architecture.
 ![Architecture](docs/architecture_diagram.png)
 
 ### Data Flow
+
+
 GitHub Archive Dataset
 ↓
 Python Ingestion Pipeline
@@ -86,87 +88,7 @@ Example rules include:
 ### Dataset Health Scoring
 Dataset health is computed based on rule failures:
 
----
 
-# Core Features
-
-### Data Ingestion
-Python pipeline ingests GitHub Archive event data into PostgreSQL.
-
-### Analytics Modeling
-dbt transforms raw events into structured analytics tables:
-
-- `fact_commits`
-- `fact_pull_requests`
-- `fact_issues`
-- `dim_repository`
-- `dim_user`
-- `dim_date`
-
-### Governance Metadata Layer
-Tracks datasets and quality rules.
-
-Tables:
-
-- `dataset_registry`
-- `rule_catalog`
-- `rule_runs`
-- `dataset_health_scores`
-- `incidents`
-
-### Automated Rule Engine
-A Python rule runner executes governance rules and logs failures.
-
-Example rules include:
-
-- duplicate commit detection
-- null commit checks
-- foreign key validation
-- duplicate issue detection
-
-### Dataset Health Scoring
-Dataset health is computed based on rule failures:
-
----
-
-# Core Features
-
-### Data Ingestion
-Python pipeline ingests GitHub Archive event data into PostgreSQL.
-
-### Analytics Modeling
-dbt transforms raw events into structured analytics tables:
-
-- `fact_commits`
-- `fact_pull_requests`
-- `fact_issues`
-- `dim_repository`
-- `dim_user`
-- `dim_date`
-
-### Governance Metadata Layer
-Tracks datasets and quality rules.
-
-Tables:
-
-- `dataset_registry`
-- `rule_catalog`
-- `rule_runs`
-- `dataset_health_scores`
-- `incidents`
-
-### Automated Rule Engine
-A Python rule runner executes governance rules and logs failures.
-
-Example rules include:
-
-- duplicate commit detection
-- null commit checks
-- foreign key validation
-- duplicate issue detection
-
-### Dataset Health Scoring
-Dataset health is computed based on rule failures:
 health_score = 1 - (failed_rules / total_rules)
 
 
@@ -183,6 +105,8 @@ Power BI dashboard visualizes:
 - rule failures
 - governance incidents
 - reliability metrics
+![Dashboard](dashboard/Dashboard.jpg)
+
 
 ---
 
@@ -201,6 +125,8 @@ Power BI dashboard visualizes:
 ---
 
 # Project Structure
+
+
 ai-data-governance-platform
 │
 ├── dashboard
