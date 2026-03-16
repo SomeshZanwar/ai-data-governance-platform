@@ -126,7 +126,7 @@ Power BI dashboard visualizes:
 
 # Project Structure
 
-
+```text
 ai-data-governance-platform
 │
 ├── dashboard
@@ -157,7 +157,7 @@ ai-data-governance-platform
 │
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 
