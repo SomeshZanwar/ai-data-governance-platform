@@ -1,0 +1,19 @@
+# environment
+.env
+venv/
+
+# python
+__pycache__/
+*.pyc
+
+# dbt artifacts
+target/
+logs/
+
+# datasets
+data_raw/
+data_processed/
+
+# OS files
+.DS_Store
+Thumbs.db
